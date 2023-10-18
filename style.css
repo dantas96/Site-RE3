@@ -1,0 +1,94 @@
+@keyframes tremer {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    80%{
+        -webkit-transform: translateY(-2.5px);
+        transform: translateY(-2.5px);
+    }
+
+}
+
+button{
+    background-color: black;
+    color: white;
+    font-family:'agency FB', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family:'agency FB', sans-serif;
+}
+
+h1 {
+    font-family:'agency FB', sans-serif;
+    font-size: 1cm;
+    font-weight: bold;
+    width: 850px;
+
+}
+
+div {
+    text-align: center;
+}
+
+.tremer:hover {
+    animation: tremer 0.5s;
+}
+
+.neon-btn {
+    font-size: 23px;
+    color: white;
+    position:static;
+    transition: 0.5s;
+  }
+
+  .neon-btn:hover{
+    animation: tremer 0.2s;
+    color: red;
+    text-shadow:  0 0 10px rgb(255, 5, 5), 0 0 5px red;
+  }
+
+
+  .container{
+    display:flex;
+    justify-content: center;
+  }
+  
+  .card{
+    position: relative;
+    height: 500px;
+    width: 280px;
+    margin: 20px;
+    perspective: 1000px;
+  }
+
+  .front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .back-card{
+    transform: rotateY(-180deg);
+  }
+  
+  .flip {
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .flip{
+    transform: rotateY(-180deg);
+  }
+  
+
+  
+ 
